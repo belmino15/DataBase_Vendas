@@ -71,7 +71,7 @@ BEGIN
       IF id_item_nota_atual IS NULL THEN
       	SET num_de_itens_nota = 1;
         SET id_item_nota_atual = 0;
-	  ELSE
+	      ELSE
         SET num_de_itens_nota = id_item_nota_atual + 1;
       END IF;
       WHILE num_de_itens_nota < id_item_nota_atual + num_de_itens_nota_final + 1 DO
@@ -96,19 +96,23 @@ delimiter ;
 
 /*Chama a função*/
 
-/* Teste
-CALL Gerar_Item_de_nota_e_nota(10,1);
-CALL Gerar_Item_de_nota_e_nota(10,2);
-CALL Gerar_Item_de_nota_e_nota(10,3);
-*/
 
-CALL Gerar_Item_de_nota_e_nota(225,1);
-CALL Gerar_Item_de_nota_e_nota(175,2);
-CALL Gerar_Item_de_nota_e_nota(160,3);
-CALL Gerar_Item_de_nota_e_nota(125,4);
-CALL Gerar_Item_de_nota_e_nota(120,5); -- Gera 10 notas com 5 itens
-CALL Gerar_Item_de_nota_e_nota(75,6);
-CALL Gerar_Item_de_nota_e_nota(75,7);
-CALL Gerar_Item_de_nota_e_nota(25,8);
-CALL Gerar_Item_de_nota_e_nota(15,9);
-CALL Gerar_Item_de_nota_e_nota(5,10);
+CALL Gerar_Item_de_nota_e_nota(500,1);
+CALL Gerar_Item_de_nota_e_nota(400,2);
+CALL Gerar_Item_de_nota_e_nota(300,3);
+CALL Gerar_Item_de_nota_e_nota(200,4);
+CALL Gerar_Item_de_nota_e_nota(100,5);
+
+
+/* Teste
+CALL Gerar_Item_de_nota_e_nota(6750,1);
+CALL Gerar_Item_de_nota_e_nota(5250,2);
+CALL Gerar_Item_de_nota_e_nota(4800,3);
+CALL Gerar_Item_de_nota_e_nota(3750,4);
+CALL Gerar_Item_de_nota_e_nota(3600,5); -- Gera 10 notas com 5 itens
+CALL Gerar_Item_de_nota_e_nota(2250,6);
+CALL Gerar_Item_de_nota_e_nota(2250,7);
+CALL Gerar_Item_de_nota_e_nota(750,8);
+CALL Gerar_Item_de_nota_e_nota(450,9);
+CALL Gerar_Item_de_nota_e_nota(150,10);
+*/
